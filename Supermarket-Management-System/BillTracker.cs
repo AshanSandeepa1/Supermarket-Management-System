@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Supermarket_Management_System
 {
-    public partial class Login : Form
+    public partial class BillTracker : Form
     {
-        public Login()
+        public BillTracker()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
