@@ -1,0 +1,11 @@
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\bin\Debug\Supermarket-Management-System.exe.config
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\bin\Debug\Supermarket-Management-System.exe
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\bin\Debug\Supermarket-Management-System.pdb
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.csproj.AssemblyReference.cache
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.csproj.SuggestedBindingRedirects.cache
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Form1.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Properties.Resources.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.csproj.GenerateResource.cache
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.csproj.CoreCompileInputs.cache
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.exe
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.pdb
