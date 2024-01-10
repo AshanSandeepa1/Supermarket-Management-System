@@ -117,14 +117,14 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(738, 388);
+            this.btnLogout.Location = new System.Drawing.Point(727, 383);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(50, 50);
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
             this.btnLogout.TabIndex = 16;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
