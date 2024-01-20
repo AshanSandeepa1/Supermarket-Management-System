@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierHome));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCreateOrder = new System.Windows.Forms.Button();
-            this.btnInvData = new System.Windows.Forms.Button();
+            this.btnViewInventory = new System.Windows.Forms.Button();
             this.btnCustData = new System.Windows.Forms.Button();
             this.btnBillTracker = new System.Windows.Forms.Button();
             this.btnReturnProducts = new System.Windows.Forms.Button();
             this.btnAddLoyaltyData = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,30 +65,6 @@
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "John";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(635, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(727, 387);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(40, 40);
-            this.btnLogout.TabIndex = 18;
-            this.btnLogout.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
@@ -119,20 +95,20 @@
             this.btnCreateOrder.UseVisualStyleBackColor = false;
             this.btnCreateOrder.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // btnInvData
+            // btnViewInventory
             // 
-            this.btnInvData.BackColor = System.Drawing.Color.Orange;
-            this.btnInvData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInvData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInvData.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvData.Location = new System.Drawing.Point(318, 126);
-            this.btnInvData.Name = "btnInvData";
-            this.btnInvData.Size = new System.Drawing.Size(189, 81);
-            this.btnInvData.TabIndex = 20;
-            this.btnInvData.Text = "View Inventory Data";
-            this.btnInvData.UseCompatibleTextRendering = true;
-            this.btnInvData.UseVisualStyleBackColor = false;
-            this.btnInvData.Click += new System.EventHandler(this.button1_Click);
+            this.btnViewInventory.BackColor = System.Drawing.Color.Orange;
+            this.btnViewInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewInventory.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInventory.Location = new System.Drawing.Point(318, 126);
+            this.btnViewInventory.Name = "btnViewInventory";
+            this.btnViewInventory.Size = new System.Drawing.Size(189, 81);
+            this.btnViewInventory.TabIndex = 20;
+            this.btnViewInventory.Text = "View Inventory";
+            this.btnViewInventory.UseCompatibleTextRendering = true;
+            this.btnViewInventory.UseVisualStyleBackColor = false;
+            this.btnViewInventory.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCustData
             // 
@@ -191,6 +167,30 @@
             this.btnAddLoyaltyData.UseCompatibleTextRendering = true;
             this.btnAddLoyaltyData.UseVisualStyleBackColor = false;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(727, 387);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.TabIndex = 18;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(635, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // CashierHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,7 +201,7 @@
             this.Controls.Add(this.btnReturnProducts);
             this.Controls.Add(this.btnAddLoyaltyData);
             this.Controls.Add(this.btnCustData);
-            this.Controls.Add(this.btnInvData);
+            this.Controls.Add(this.btnViewInventory);
             this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCreateOrder;
-        private System.Windows.Forms.Button btnInvData;
+        private System.Windows.Forms.Button btnViewInventory;
         private System.Windows.Forms.Button btnCustData;
         private System.Windows.Forms.Button btnBillTracker;
         private System.Windows.Forms.Button btnReturnProducts;
