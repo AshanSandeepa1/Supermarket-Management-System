@@ -10,3 +10,4 @@ E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-Sy
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket-Management-System.pdb
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Login.resources
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.BillTracker.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.CashierHome.resources

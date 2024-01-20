@@ -181,6 +181,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBillTrack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Supermarket Management System";
             this.Load += new System.EventHandler(this.Form1_Load);

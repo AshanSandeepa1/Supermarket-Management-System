@@ -42,11 +42,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(240, 80);
+            this.label1.Location = new System.Drawing.Point(257, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 58);
+            this.label1.Size = new System.Drawing.Size(227, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Track Your Bill";
             // 

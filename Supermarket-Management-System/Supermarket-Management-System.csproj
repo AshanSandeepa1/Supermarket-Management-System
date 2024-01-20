@@ -52,6 +52,12 @@
     <Compile Include="BillTracker.Designer.cs">
       <DependentUpon>BillTracker.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashierHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierHome.Designer.cs">
+      <DependentUpon>CashierHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BillTracker.resx">
       <DependentUpon>BillTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierHome.resx">
+      <DependentUpon>CashierHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -74,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman-clipart-salesman-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\businessman-clipart-salesman-4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
