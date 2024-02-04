@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Supermarket_Management_System
 {
-    public partial class BillTracker : Form
+    public partial class CardPayment : Form
     {
-        public BillTracker()
+        public CardPayment()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

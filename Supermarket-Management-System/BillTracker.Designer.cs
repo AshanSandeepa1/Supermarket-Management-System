@@ -37,6 +37,8 @@
             this.txtLoyaltyNum = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +65,7 @@
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseCompatibleTextRendering = true;
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label5
             // 
@@ -128,12 +131,21 @@
             this.btnLogout.TabIndex = 16;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(801, 59);
+            this.panel1.TabIndex = 25;
+            // 
             // BillTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
@@ -159,5 +171,7 @@
         private System.Windows.Forms.TextBox txtLoyaltyNum;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel panel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

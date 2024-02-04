@@ -11,3 +11,9 @@ E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-Sy
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Login.resources
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.BillTracker.resources
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.CashierHome.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Cart.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.ManagerHome.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.StockKeeperHome.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Checkout.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.BillPreview.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.EditCartItems.resources

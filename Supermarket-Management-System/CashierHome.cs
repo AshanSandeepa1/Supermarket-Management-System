@@ -46,5 +46,15 @@ namespace Supermarket_Management_System
         {
 
         }
+
+        private void btnBillTracker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturnProducts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

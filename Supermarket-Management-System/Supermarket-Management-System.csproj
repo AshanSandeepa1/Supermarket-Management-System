@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPreview.Designer.cs">
+      <DependentUpon>BillPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillTracker.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BillTracker.Designer.cs">
       <DependentUpon>BillTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardPayment.Designer.cs">
+      <DependentUpon>CardPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
     <Compile Include="CashierHome.cs">
       <SubType>Form</SubType>
@@ -58,11 +76,29 @@
     <Compile Include="CashierHome.Designer.cs">
       <DependentUpon>CashierHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCartItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCartItems.Designer.cs">
+      <DependentUpon>EditCartItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoyaltyCustomerReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoyaltyCustomerReg.Designer.cs">
+      <DependentUpon>LoyaltyCustomerReg.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerHome.cs">
       <SubType>Form</SubType>
@@ -78,14 +114,38 @@
     <Compile Include="StockKeeperHome.Designer.cs">
       <DependentUpon>StockKeeperHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInventory.Designer.cs">
+      <DependentUpon>ViewInventory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BillPreview.resx">
+      <DependentUpon>BillPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillTracker.resx">
       <DependentUpon>BillTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPayment.resx">
+      <DependentUpon>CardPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CashierHome.resx">
       <DependentUpon>CashierHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCartItems.resx">
+      <DependentUpon>EditCartItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoyaltyCustomerReg.resx">
+      <DependentUpon>LoyaltyCustomerReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerHome.resx">
       <DependentUpon>ManagerHome.cs</DependentUpon>
@@ -102,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="StockKeeperHome.resx">
       <DependentUpon>StockKeeperHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInventory.resx">
+      <DependentUpon>ViewInventory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

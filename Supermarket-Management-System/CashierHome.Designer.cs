@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCreateOrder = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btnReturnProducts = new System.Windows.Forms.Button();
             this.btnAddLoyaltyData = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
             this.panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(635, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblUser
             // 
@@ -138,6 +149,7 @@
             this.btnBillTracker.Text = "Bill Tracker";
             this.btnBillTracker.UseCompatibleTextRendering = true;
             this.btnBillTracker.UseVisualStyleBackColor = false;
+            this.btnBillTracker.Click += new System.EventHandler(this.btnBillTracker_Click);
             // 
             // btnReturnProducts
             // 
@@ -152,6 +164,7 @@
             this.btnReturnProducts.Text = "Return of Products";
             this.btnReturnProducts.UseCompatibleTextRendering = true;
             this.btnReturnProducts.UseVisualStyleBackColor = false;
+            this.btnReturnProducts.Click += new System.EventHandler(this.btnReturnProducts_Click);
             // 
             // btnAddLoyaltyData
             // 
@@ -179,17 +192,6 @@
             this.btnLogout.Size = new System.Drawing.Size(40, 40);
             this.btnLogout.TabIndex = 18;
             this.btnLogout.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(635, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // CashierHome
             // 
