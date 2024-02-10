@@ -37,5 +37,10 @@ namespace Supermarket_Management_System
         {
             Application.Exit();
         }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

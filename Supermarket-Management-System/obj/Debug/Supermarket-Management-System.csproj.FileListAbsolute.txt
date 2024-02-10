@@ -17,3 +17,12 @@ E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-Sy
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Checkout.resources
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.BillPreview.resources
 E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.EditCartItems.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.CardPayment.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.LoyaltyCustomerReg.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.ViewInventory.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.ReturnOfProducts.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.UpdateInventory.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.ViewCustomerData.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.Reports.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.TransactionDetails.resources
+E:\Visual Studio Project\Supermarket-Management-System\Supermarket-Management-System\obj\Debug\Supermarket_Management_System.UpdateCustomerData.resources
