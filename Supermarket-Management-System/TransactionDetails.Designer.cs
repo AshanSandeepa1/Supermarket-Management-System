@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionDetails));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtToDate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +48,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
@@ -65,30 +60,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(272, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 29);
+            this.label1.Size = new System.Drawing.Size(239, 36);
             this.label1.TabIndex = 26;
             this.label1.Text = "Transaction Details";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(700, 16);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(58, 29);
-            this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "John";
             // 
             // tableLayoutPanel1
             // 
@@ -120,7 +94,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(71, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 19);
+            this.label3.Size = new System.Drawing.Size(66, 24);
             this.label3.TabIndex = 79;
             this.label3.Text = "To Date";
             // 
@@ -152,7 +126,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(71, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 74;
             this.label2.Text = "From Date";
             // 
@@ -210,7 +184,6 @@
             this.Text = "TransactionDetails";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,8 +194,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtToDate;
         private System.Windows.Forms.Label label3;

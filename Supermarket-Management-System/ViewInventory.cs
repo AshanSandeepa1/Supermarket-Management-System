@@ -12,9 +12,11 @@ namespace Supermarket_Management_System
 {
     public partial class ViewInventory : Form
     {
-        public ViewInventory()
+        private Form previousForm;
+        public ViewInventory(Form previousForm)
         {
             InitializeComponent();
+            this.previousForm = previousForm; // Assign the previous form
         }
 
         private void ViewInventory_Load(object sender, EventArgs e)
@@ -74,7 +76,19 @@ namespace Supermarket_Management_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Hide the current form (ManagerHomeScreen)
+            this.Hide();
 
+            // Show the previous form
+            if (previousForm != null)
+            {
+                previousForm.Show();
+            }
+            else
+            {
+                // If previous form is null, just close this form
+                this.Close();
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -84,7 +98,12 @@ namespace Supermarket_Management_System
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

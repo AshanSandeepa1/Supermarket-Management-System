@@ -40,15 +40,12 @@
             this.txtLoyaltyNum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUser = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,11 +56,13 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(724, 9);
+            this.btnLogout.Location = new System.Drawing.Point(965, 11);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.Size = new System.Drawing.Size(53, 49);
             this.btnLogout.TabIndex = 28;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnBack
             // 
@@ -71,35 +70,39 @@
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(37, 9);
+            this.btnBack.Location = new System.Drawing.Point(49, 11);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(121, 39);
+            this.btnBack.Size = new System.Drawing.Size(161, 48);
             this.btnBack.TabIndex = 27;
             this.btnBack.Text = "Back";
             this.btnBack.UseCompatibleTextRendering = true;
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 232);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(43, 286);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(726, 123);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(968, 151);
             this.tableLayoutPanel1.TabIndex = 103;
             // 
             // txtContactNum
             // 
-            this.txtContactNum.Location = new System.Drawing.Point(194, 166);
+            this.txtContactNum.Location = new System.Drawing.Point(259, 204);
+            this.txtContactNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContactNum.Name = "txtContactNum";
-            this.txtContactNum.Size = new System.Drawing.Size(168, 20);
+            this.txtContactNum.Size = new System.Drawing.Size(223, 22);
             this.txtContactNum.TabIndex = 102;
             // 
             // label5
@@ -107,17 +110,19 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(82, 166);
+            this.label5.Location = new System.Drawing.Point(109, 204);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 19);
+            this.label5.Size = new System.Drawing.Size(98, 24);
             this.label5.TabIndex = 101;
             this.label5.Text = "Contact No.";
             // 
             // txtNIC
             // 
-            this.txtNIC.Location = new System.Drawing.Point(194, 137);
+            this.txtNIC.Location = new System.Drawing.Point(259, 169);
+            this.txtNIC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNIC.Name = "txtNIC";
-            this.txtNIC.Size = new System.Drawing.Size(168, 20);
+            this.txtNIC.Size = new System.Drawing.Size(223, 22);
             this.txtNIC.TabIndex = 100;
             // 
             // label4
@@ -125,24 +130,27 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(82, 137);
+            this.label4.Location = new System.Drawing.Point(109, 169);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 19);
+            this.label4.Size = new System.Drawing.Size(36, 24);
             this.label4.TabIndex = 99;
             this.label4.Text = "NIC";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(194, 109);
+            this.txtName.Location = new System.Drawing.Point(259, 134);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(168, 20);
+            this.txtName.Size = new System.Drawing.Size(223, 22);
             this.txtName.TabIndex = 97;
             // 
             // txtLoyaltyNum
             // 
-            this.txtLoyaltyNum.Location = new System.Drawing.Point(194, 81);
+            this.txtLoyaltyNum.Location = new System.Drawing.Point(259, 100);
+            this.txtLoyaltyNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLoyaltyNum.Name = "txtLoyaltyNum";
-            this.txtLoyaltyNum.Size = new System.Drawing.Size(168, 20);
+            this.txtLoyaltyNum.Size = new System.Drawing.Size(223, 22);
             this.txtLoyaltyNum.TabIndex = 95;
             // 
             // label2
@@ -150,9 +158,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(82, 82);
+            this.label2.Location = new System.Drawing.Point(109, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 19);
+            this.label2.Size = new System.Drawing.Size(132, 24);
             this.label2.TabIndex = 91;
             this.label2.Text = "Loyalty Number";
             // 
@@ -161,21 +170,11 @@
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Location = new System.Drawing.Point(0, 390);
+            this.panel2.Location = new System.Drawing.Point(0, 480);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 59);
+            this.panel2.Size = new System.Drawing.Size(1068, 73);
             this.panel2.TabIndex = 93;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(700, 16);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(58, 29);
-            this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "John";
             // 
             // btnUpdate
             // 
@@ -183,9 +182,10 @@
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(534, 140);
+            this.btnUpdate.Location = new System.Drawing.Point(712, 172);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(156, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(208, 43);
             this.btnUpdate.TabIndex = 98;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseCompatibleTextRendering = true;
@@ -197,9 +197,10 @@
             this.btnFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFilter.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.Location = new System.Drawing.Point(534, 87);
+            this.btnFilter.Location = new System.Drawing.Point(712, 107);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(156, 35);
+            this.btnFilter.Size = new System.Drawing.Size(208, 43);
             this.btnFilter.TabIndex = 94;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseCompatibleTextRendering = true;
@@ -210,32 +211,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(272, 16);
+            this.label1.Location = new System.Drawing.Point(363, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 29);
+            this.label1.Size = new System.Drawing.Size(188, 36);
             this.label1.TabIndex = 26;
             this.label1.Text = "Customer Data";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 59);
+            this.panel1.Size = new System.Drawing.Size(1068, 73);
             this.panel1.TabIndex = 92;
             // 
             // label3
@@ -243,17 +234,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(82, 109);
+            this.label3.Location = new System.Drawing.Point(109, 134);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 19);
+            this.label3.Size = new System.Drawing.Size(54, 24);
             this.label3.TabIndex = 96;
             this.label3.Text = "Name";
             // 
             // ViewCustomerData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.txtContactNum);
             this.Controls.Add(this.label5);
@@ -267,10 +259,11 @@
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewCustomerData";
             this.Text = "ViewCustomerData";
+            this.Load += new System.EventHandler(this.ViewCustomerData_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -291,11 +284,9 @@
         private System.Windows.Forms.TextBox txtLoyaltyNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
     }

@@ -12,9 +12,41 @@ namespace Supermarket_Management_System
 {
     public partial class StockKeeperHome : Form
     {
-        public StockKeeperHome()
+        private string username;
+        private Form previousForm;
+        public StockKeeperHome(string username, Form previousForm)
         {
             InitializeComponent();
+            this.username = username;
+            this.previousForm = previousForm;
+            lblUser.Text = username;
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // Hide the current form (ManagerHomeScreen)
+            this.Hide();
+
+            // Show the previous form
+            if (previousForm != null)
+            {
+                previousForm.Show();
+            }
+            else
+            {
+                // If previous form is null, just close this form
+                this.Close();
+            }
         }
     }
 }

@@ -31,10 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checkout));
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,12 +54,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.lblSubTotal = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRegCustmer = new System.Windows.Forms.Button();
@@ -68,7 +66,6 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -90,22 +87,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(272, 16);
+            this.label1.Location = new System.Drawing.Point(335, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 29);
+            this.label1.Size = new System.Drawing.Size(124, 36);
             this.label1.TabIndex = 26;
             this.label1.Text = "Checkout";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(700, 16);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(58, 29);
-            this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "John";
             // 
             // panel2
             // 
@@ -117,12 +103,23 @@
             this.panel2.Size = new System.Drawing.Size(801, 59);
             this.panel2.TabIndex = 43;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(724, 9);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.TabIndex = 28;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
@@ -155,13 +152,55 @@
             this.panel3.Size = new System.Drawing.Size(242, 330);
             this.panel3.TabIndex = 57;
             // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDiscount.ForeColor = System.Drawing.Color.Orange;
+            this.lblDiscount.Location = new System.Drawing.Point(162, 182);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(42, 24);
+            this.lblDiscount.TabIndex = 47;
+            this.lblDiscount.Text = "0.00";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Orange;
+            this.label6.Location = new System.Drawing.Point(31, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 24);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Discount";
+            // 
+            // lblSubTotal
+            // 
+            this.lblSubTotal.AutoSize = true;
+            this.lblSubTotal.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSubTotal.Location = new System.Drawing.Point(162, 163);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(42, 24);
+            this.lblSubTotal.TabIndex = 45;
+            this.lblSubTotal.Text = "0.00";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(31, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 24);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Sub Total";
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(162, 226);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(36, 19);
+            this.lblTotal.Size = new System.Drawing.Size(42, 24);
             this.lblTotal.TabIndex = 43;
             this.lblTotal.Text = "0.00";
             // 
@@ -171,7 +210,7 @@
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(31, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 19);
+            this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 42;
             this.label5.Text = "Total";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -358,71 +397,6 @@
             this.button13.UseCompatibleTextRendering = true;
             this.button13.UseVisualStyleBackColor = false;
             // 
-            // lblSubTotal
-            // 
-            this.lblSubTotal.AutoSize = true;
-            this.lblSubTotal.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSubTotal.Location = new System.Drawing.Point(162, 163);
-            this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(36, 19);
-            this.lblSubTotal.TabIndex = 45;
-            this.lblSubTotal.Text = "0.00";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(31, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 19);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Sub Total";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDiscount.ForeColor = System.Drawing.Color.Orange;
-            this.lblDiscount.Location = new System.Drawing.Point(162, 182);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(36, 19);
-            this.lblDiscount.TabIndex = 47;
-            this.lblDiscount.Text = "0.00";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(31, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 19);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Discount";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(724, 9);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(40, 40);
-            this.btnLogout.TabIndex = 28;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -430,7 +404,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 19);
+            this.label2.Size = new System.Drawing.Size(132, 24);
             this.label2.TabIndex = 27;
             this.label2.Text = "Loyalty Number";
             // 
@@ -462,7 +436,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(33, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 19);
+            this.label4.Size = new System.Drawing.Size(186, 24);
             this.label4.TabIndex = 59;
             this.label4.Text = "Redeem Loyalty Points";
             // 
@@ -472,7 +446,7 @@
             this.rdbtnYes.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnYes.Location = new System.Drawing.Point(209, 186);
             this.rdbtnYes.Name = "rdbtnYes";
-            this.rdbtnYes.Size = new System.Drawing.Size(45, 20);
+            this.rdbtnYes.Size = new System.Drawing.Size(57, 25);
             this.rdbtnYes.TabIndex = 60;
             this.rdbtnYes.TabStop = true;
             this.rdbtnYes.Text = "Yes";
@@ -484,7 +458,7 @@
             this.rdbtnNo.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnNo.Location = new System.Drawing.Point(260, 186);
             this.rdbtnNo.Name = "rdbtnNo";
-            this.rdbtnNo.Size = new System.Drawing.Size(41, 20);
+            this.rdbtnNo.Size = new System.Drawing.Size(52, 25);
             this.rdbtnNo.TabIndex = 61;
             this.rdbtnNo.TabStop = true;
             this.rdbtnNo.Text = "No";
@@ -496,7 +470,7 @@
             this.rdbtnCard.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnCard.Location = new System.Drawing.Point(180, 268);
             this.rdbtnCard.Name = "rdbtnCard";
-            this.rdbtnCard.Size = new System.Drawing.Size(129, 20);
+            this.rdbtnCard.Size = new System.Drawing.Size(168, 25);
             this.rdbtnCard.TabIndex = 64;
             this.rdbtnCard.TabStop = true;
             this.rdbtnCard.Text = "Credit/ Debit Card";
@@ -508,7 +482,7 @@
             this.rdbtnCash.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnCash.Location = new System.Drawing.Point(180, 242);
             this.rdbtnCash.Name = "rdbtnCash";
-            this.rdbtnCash.Size = new System.Drawing.Size(54, 20);
+            this.rdbtnCash.Size = new System.Drawing.Size(69, 25);
             this.rdbtnCash.TabIndex = 63;
             this.rdbtnCash.TabStop = true;
             this.rdbtnCash.Text = "Cash";
@@ -521,7 +495,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(33, 240);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 19);
+            this.label7.Size = new System.Drawing.Size(140, 24);
             this.label7.TabIndex = 62;
             this.label7.Text = "Payment Method";
             // 
@@ -549,7 +523,6 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,8 +533,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;

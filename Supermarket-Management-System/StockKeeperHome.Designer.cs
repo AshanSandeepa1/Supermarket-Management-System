@@ -71,6 +71,7 @@
             this.lblUser.Size = new System.Drawing.Size(58, 29);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "John";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // btnViewInventory
             // 
@@ -98,6 +99,7 @@
             this.btnLogout.Size = new System.Drawing.Size(40, 40);
             this.btnLogout.TabIndex = 26;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnBack
             // 
@@ -112,6 +114,7 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseCompatibleTextRendering = true;
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnUpdateInventory
             // 

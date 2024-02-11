@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateInventory));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
             this.txtBranchID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFilter = new System.Windows.Forms.Button();
@@ -39,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddNewStock = new System.Windows.Forms.Button();
             this.txtBarcode = new System.Windows.Forms.TextBox();
@@ -50,19 +50,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
@@ -76,22 +71,10 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(272, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 29);
+            this.label1.Size = new System.Drawing.Size(214, 36);
             this.label1.TabIndex = 26;
             this.label1.Text = "Update Inventory";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(700, 16);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(58, 29);
-            this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "John";
-            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // txtBranchID
             // 
@@ -108,7 +91,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(82, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
+            this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 78;
             this.label3.Text = "Branch ID";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -143,7 +126,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(82, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 19);
+            this.label2.Size = new System.Drawing.Size(74, 24);
             this.label2.TabIndex = 73;
             this.label2.Text = "Stock ID";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -173,6 +156,20 @@
             this.panel2.Size = new System.Drawing.Size(801, 59);
             this.panel2.TabIndex = 75;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(724, 9);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.TabIndex = 28;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnUpdate
             // 
@@ -219,7 +216,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(82, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.Size = new System.Drawing.Size(73, 24);
             this.label4.TabIndex = 82;
             this.label4.Text = "Barcode";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -239,7 +236,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(82, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 19);
+            this.label5.Size = new System.Drawing.Size(45, 24);
             this.label5.TabIndex = 84;
             this.label5.Text = "Item";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -259,7 +256,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(82, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 19);
+            this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 86;
             this.label6.Text = "Quantity";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -279,7 +276,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(82, 218);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 19);
+            this.label7.Size = new System.Drawing.Size(115, 24);
             this.label7.TabIndex = 88;
             this.label7.Text = "Price per unit";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -300,31 +297,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(726, 85);
             this.tableLayoutPanel1.TabIndex = 90;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.businessman_clipart_salesman_41;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(724, 9);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(40, 40);
-            this.btnLogout.TabIndex = 28;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // UpdateInventory
             // 
@@ -355,7 +327,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,8 +336,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.TextBox txtBranchID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnFilter;

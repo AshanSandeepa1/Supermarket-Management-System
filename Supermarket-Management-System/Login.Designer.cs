@@ -40,7 +40,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.btnBillTrack.Text = "Bill Tracker";
             this.btnBillTrack.UseCompatibleTextRendering = true;
             this.btnBillTrack.UseVisualStyleBackColor = false;
+            this.btnBillTrack.Click += new System.EventHandler(this.btnBillTrack_Click);
             // 
             // label2
             // 
@@ -143,6 +144,7 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseCompatibleTextRendering = true;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
@@ -164,19 +166,19 @@
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnlogout
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(736, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnlogout.BackColor = System.Drawing.Color.Red;
+            this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnlogout.Image = ((System.Drawing.Image)(resources.GetObject("btnlogout.Image")));
+            this.btnlogout.Location = new System.Drawing.Point(736, 388);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(40, 40);
+            this.btnlogout.TabIndex = 17;
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -185,7 +187,7 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -218,7 +220,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
     }
