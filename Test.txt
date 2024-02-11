@@ -1,1 +1,47 @@
-Test
+using MySql.Data.MySqlClient;
+
+namespace Supermarket_Management_System
+{
+    public partial class Login : Form
+    {
+        public Login()
+        {
+            InitializeComponent();
+            string mysqlCon = "server=127.0.0.1; user=root; database=supermarket_mgmt_system; password=";
+            MySqlConnection mysqlConnection = new MySqlConnection(mysqlCon);
+            try
+            {
+                mysqlConnection.Open();
+                MessageBox.Show("success");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { mysqlConnection.Close(); }
+----------------------------------------------------------------------- Connection Test
+
+Application.Exit();  ---exit
+
+DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+    
+    if (result == DialogResult.Yes)
+    {
+        Application.Exit();
+    }
+
+------------ back
+
+// Hide the current form (ManagerHomeScreen)
+            this.Hide();
+
+            // Show the previous form
+            if (previousForm != null)
+            {
+                previousForm.Show();
+            }
+            else
+            {
+                // If previous form is null, just close this form
+                this.Close();
+            }
+----------------------
