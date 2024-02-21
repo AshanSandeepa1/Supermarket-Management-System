@@ -156,7 +156,9 @@
             this.Controls.Add(this.btnViewInventory);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StockKeeperHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockKeeperHome";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

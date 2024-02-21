@@ -237,7 +237,9 @@
             this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerHome";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
