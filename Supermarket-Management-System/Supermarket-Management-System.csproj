@@ -143,6 +143,7 @@
     <Compile Include="EditCartItems.Designer.cs">
       <DependentUpon>EditCartItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemEditedEventArgs.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

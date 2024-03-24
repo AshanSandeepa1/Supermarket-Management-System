@@ -125,6 +125,7 @@
             this.btnDone.Text = "Done";
             this.btnDone.UseCompatibleTextRendering = true;
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // EditCartItems
             // 
@@ -144,6 +145,7 @@
             this.Name = "EditCartItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditCartItems";
+            this.Load += new System.EventHandler(this.EditCartItems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
