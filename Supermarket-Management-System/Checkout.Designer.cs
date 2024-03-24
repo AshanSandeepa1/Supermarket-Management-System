@@ -98,7 +98,7 @@
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Location = new System.Drawing.Point(0, 390);
+            this.panel2.Location = new System.Drawing.Point(0, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(801, 59);
             this.panel2.TabIndex = 43;
@@ -120,7 +120,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
             this.panel1.TabIndex = 42;
@@ -147,9 +147,9 @@
             this.panel3.Controls.Add(this.button11);
             this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.button13);
-            this.panel3.Location = new System.Drawing.Point(558, 60);
+            this.panel3.Location = new System.Drawing.Point(558, 59);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 330);
+            this.panel3.Size = new System.Drawing.Size(242, 334);
             this.panel3.TabIndex = 57;
             // 
             // lblDiscount

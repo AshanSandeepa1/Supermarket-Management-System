@@ -95,7 +95,12 @@ namespace Supermarket_Management_System
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void CashierHome_Load(object sender, EventArgs e)
