@@ -60,5 +60,10 @@ namespace Supermarket_Management_System
                 this.Close();
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

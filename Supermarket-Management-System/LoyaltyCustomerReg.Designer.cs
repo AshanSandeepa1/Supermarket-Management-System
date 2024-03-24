@@ -141,6 +141,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoyaltyCustomerReg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoyaltyCustomerReg";
             this.ResumeLayout(false);
             this.PerformLayout();

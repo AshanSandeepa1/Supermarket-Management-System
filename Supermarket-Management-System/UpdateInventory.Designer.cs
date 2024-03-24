@@ -71,7 +71,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(272, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 36);
+            this.label1.Size = new System.Drawing.Size(172, 29);
             this.label1.TabIndex = 26;
             this.label1.Text = "Update Inventory";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -91,7 +91,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(82, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 78;
             this.label3.Text = "Branch ID";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -126,7 +126,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(82, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.Size = new System.Drawing.Size(60, 19);
             this.label2.TabIndex = 73;
             this.label2.Text = "Stock ID";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -216,7 +216,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(82, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 24);
+            this.label4.Size = new System.Drawing.Size(61, 19);
             this.label4.TabIndex = 82;
             this.label4.Text = "Barcode";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -236,7 +236,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(82, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 24);
+            this.label5.Size = new System.Drawing.Size(37, 19);
             this.label5.TabIndex = 84;
             this.label5.Text = "Item";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -256,7 +256,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(82, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 24);
+            this.label6.Size = new System.Drawing.Size(63, 19);
             this.label6.TabIndex = 86;
             this.label6.Text = "Quantity";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -276,7 +276,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(82, 218);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 24);
+            this.label7.Size = new System.Drawing.Size(95, 19);
             this.label7.TabIndex = 88;
             this.label7.Text = "Price per unit";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -321,7 +321,9 @@
             this.Controls.Add(this.txtStockID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateInventory";
             this.Load += new System.EventHandler(this.UpdateInventory_Load);
             this.panel1.ResumeLayout(false);

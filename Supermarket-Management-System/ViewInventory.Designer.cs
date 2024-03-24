@@ -74,7 +74,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(71, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
+            this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 65;
             this.label2.Text = "Barcode";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -101,7 +101,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(272, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 36);
+            this.label1.Size = new System.Drawing.Size(161, 29);
             this.label1.TabIndex = 26;
             this.label1.Text = "Stock Inventory";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -111,7 +111,7 @@
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Location = new System.Drawing.Point(0, 390);
+            this.panel2.Location = new System.Drawing.Point(0, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(801, 59);
             this.panel2.TabIndex = 67;
@@ -135,7 +135,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
             this.panel1.TabIndex = 66;
@@ -156,7 +156,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(71, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 71;
             this.label3.Text = "Branch ID";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -191,7 +191,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewInventory";
             this.Load += new System.EventHandler(this.ViewInventory_Load);
             this.panel2.ResumeLayout(false);

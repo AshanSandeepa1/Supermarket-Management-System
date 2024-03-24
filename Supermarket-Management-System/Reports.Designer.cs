@@ -63,7 +63,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(272, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 36);
+            this.label1.Size = new System.Drawing.Size(86, 29);
             this.label1.TabIndex = 26;
             this.label1.Text = "Reports";
             // 
@@ -162,7 +162,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(127, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.Size = new System.Drawing.Size(55, 19);
             this.label3.TabIndex = 85;
             this.label3.Text = "To Date";
             // 
@@ -180,7 +180,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(108, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 24);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 83;
             this.label2.Text = "From Date";
             // 
@@ -190,7 +190,7 @@
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(99, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 24);
+            this.label4.Size = new System.Drawing.Size(83, 19);
             this.label4.TabIndex = 88;
             this.label4.Text = "Report Type";
             // 
@@ -204,7 +204,7 @@
             "Customer Data"});
             this.cmbRole.Location = new System.Drawing.Point(220, 89);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(168, 25);
+            this.cmbRole.Size = new System.Drawing.Size(168, 21);
             this.cmbRole.TabIndex = 87;
             // 
             // Reports
@@ -223,7 +223,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

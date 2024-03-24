@@ -119,6 +119,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CardPayment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CardPayment";
             this.ResumeLayout(false);
             this.PerformLayout();

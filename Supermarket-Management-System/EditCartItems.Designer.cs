@@ -142,6 +142,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCartItems";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditCartItems";
             this.ResumeLayout(false);
             this.PerformLayout();
