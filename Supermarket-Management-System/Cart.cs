@@ -251,13 +251,20 @@ namespace Supermarket_Management_System
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            this.Hide();
             // Get the total value
             decimal total = UpdateTotal();
 
-            // Open Checkout form and pass total value
-            Checkout checkoutForm = new Checkout(total, this);
-            checkoutForm.Show();
+            if (total > 0){
+                // Open Checkout form and pass total value
+                Checkout checkoutForm = new Checkout(total, this);
+                checkoutForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please add items to the Cart!");
+            }
+            
         }
     }
 }

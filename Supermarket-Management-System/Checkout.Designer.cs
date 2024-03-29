@@ -41,9 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLoyaltyNum = new System.Windows.Forms.TextBox();
             this.btnRegCustmer = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.rdbtnYes = new System.Windows.Forms.RadioButton();
@@ -53,6 +53,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.btnSearchCustomer = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPoints = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -128,7 +131,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.lblTotal);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnCheckout);
             this.panel3.Location = new System.Drawing.Point(558, 59);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 334);
@@ -197,19 +200,20 @@
             this.label5.Text = "Total";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // btnCheckout
             // 
-            this.button1.BackColor = System.Drawing.Color.YellowGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 32);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Checkout";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCheckout.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCheckout.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckout.Location = new System.Drawing.Point(55, 282);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(145, 32);
+            this.btnCheckout.TabIndex = 41;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseCompatibleTextRendering = true;
+            this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -222,12 +226,12 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Loyalty Number";
             // 
-            // textBox1
+            // txtLoyaltyNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 58;
+            this.txtLoyaltyNum.Location = new System.Drawing.Point(157, 87);
+            this.txtLoyaltyNum.Name = "txtLoyaltyNum";
+            this.txtLoyaltyNum.Size = new System.Drawing.Size(168, 20);
+            this.txtLoyaltyNum.TabIndex = 58;
             // 
             // btnRegCustmer
             // 
@@ -235,20 +239,21 @@
             this.btnRegCustmer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegCustmer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegCustmer.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegCustmer.Location = new System.Drawing.Point(157, 113);
+            this.btnRegCustmer.Location = new System.Drawing.Point(157, 153);
             this.btnRegCustmer.Name = "btnRegCustmer";
             this.btnRegCustmer.Size = new System.Drawing.Size(168, 28);
             this.btnRegCustmer.TabIndex = 48;
             this.btnRegCustmer.Text = "Register Customer";
             this.btnRegCustmer.UseCompatibleTextRendering = true;
             this.btnRegCustmer.UseVisualStyleBackColor = false;
+            this.btnRegCustmer.Click += new System.EventHandler(this.btnRegCustmer_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(33, 184);
+            this.label4.Location = new System.Drawing.Point(33, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 19);
             this.label4.TabIndex = 59;
@@ -258,19 +263,20 @@
             // 
             this.rdbtnYes.AutoSize = true;
             this.rdbtnYes.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnYes.Location = new System.Drawing.Point(209, 186);
+            this.rdbtnYes.Location = new System.Drawing.Point(209, 221);
             this.rdbtnYes.Name = "rdbtnYes";
             this.rdbtnYes.Size = new System.Drawing.Size(45, 20);
             this.rdbtnYes.TabIndex = 60;
             this.rdbtnYes.TabStop = true;
             this.rdbtnYes.Text = "Yes";
             this.rdbtnYes.UseVisualStyleBackColor = true;
+            this.rdbtnYes.CheckedChanged += new System.EventHandler(this.rdbtnYes_CheckedChanged);
             // 
             // rdbtnNo
             // 
             this.rdbtnNo.AutoSize = true;
             this.rdbtnNo.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnNo.Location = new System.Drawing.Point(260, 186);
+            this.rdbtnNo.Location = new System.Drawing.Point(260, 221);
             this.rdbtnNo.Name = "rdbtnNo";
             this.rdbtnNo.Size = new System.Drawing.Size(41, 20);
             this.rdbtnNo.TabIndex = 61;
@@ -282,7 +288,7 @@
             // 
             this.rdbtnCard.AutoSize = true;
             this.rdbtnCard.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnCard.Location = new System.Drawing.Point(180, 268);
+            this.rdbtnCard.Location = new System.Drawing.Point(180, 295);
             this.rdbtnCard.Name = "rdbtnCard";
             this.rdbtnCard.Size = new System.Drawing.Size(129, 20);
             this.rdbtnCard.TabIndex = 64;
@@ -294,7 +300,7 @@
             // 
             this.rdbtnCash.AutoSize = true;
             this.rdbtnCash.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnCash.Location = new System.Drawing.Point(180, 242);
+            this.rdbtnCash.Location = new System.Drawing.Point(180, 269);
             this.rdbtnCash.Name = "rdbtnCash";
             this.rdbtnCash.Size = new System.Drawing.Size(54, 20);
             this.rdbtnCash.TabIndex = 63;
@@ -307,7 +313,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(33, 240);
+            this.label7.Location = new System.Drawing.Point(33, 267);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 19);
             this.label7.TabIndex = 62;
@@ -326,18 +332,59 @@
             // 
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Bahnschrift", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(115, 29);
+            this.lblDisplay.Location = new System.Drawing.Point(30, 27);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(80, 42);
             this.lblDisplay.TabIndex = 43;
             this.lblDisplay.Text = "0.00";
             this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
+            // btnSearchCustomer
+            // 
+            this.btnSearchCustomer.BackColor = System.Drawing.Color.LightGray;
+            this.btnSearchCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchCustomer.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCustomer.Location = new System.Drawing.Point(157, 118);
+            this.btnSearchCustomer.Name = "btnSearchCustomer";
+            this.btnSearchCustomer.Size = new System.Drawing.Size(168, 28);
+            this.btnSearchCustomer.TabIndex = 65;
+            this.btnSearchCustomer.Text = "Search Customer";
+            this.btnSearchCustomer.UseCompatibleTextRendering = true;
+            this.btnSearchCustomer.UseVisualStyleBackColor = false;
+            this.btnSearchCustomer.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUser.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblUser.Location = new System.Drawing.Point(356, 88);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(48, 19);
+            this.lblUser.TabIndex = 49;
+            this.lblUser.Text = "Name:";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
+            // 
+            // lblPoints
+            // 
+            this.lblPoints.AutoSize = true;
+            this.lblPoints.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPoints.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblPoints.Location = new System.Drawing.Point(354, 121);
+            this.lblPoints.Name = "lblPoints";
+            this.lblPoints.Size = new System.Drawing.Size(50, 19);
+            this.lblPoints.TabIndex = 66;
+            this.lblPoints.Text = "Points:";
+            // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPoints);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.btnSearchCustomer);
             this.Controls.Add(this.rdbtnCard);
             this.Controls.Add(this.rdbtnCash);
             this.Controls.Add(this.label7);
@@ -345,7 +392,7 @@
             this.Controls.Add(this.rdbtnYes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRegCustmer);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLoyaltyNum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -376,13 +423,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLoyaltyNum;
         private System.Windows.Forms.Button btnRegCustmer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rdbtnYes;
@@ -392,5 +439,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button btnSearchCustomer;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPoints;
     }
 }

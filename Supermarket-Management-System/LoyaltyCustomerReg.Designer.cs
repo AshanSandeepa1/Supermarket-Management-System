@@ -37,11 +37,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtLoyaltyNum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDone
             // 
-            this.btnDone.BackColor = System.Drawing.Color.DarkGray;
+            this.btnDone.BackColor = System.Drawing.Color.LightGray;
             this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDone.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -52,6 +53,7 @@
             this.btnDone.Text = "Done";
             this.btnDone.UseCompatibleTextRendering = true;
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // txtContactNum
             // 
@@ -125,11 +127,27 @@
             this.label2.TabIndex = 68;
             this.label2.Text = "Loyalty Number";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.LightGray;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(358, 311);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(110, 35);
+            this.btnCancel.TabIndex = 77;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseCompatibleTextRendering = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // LoyaltyCustomerReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 374);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.txtContactNum);
             this.Controls.Add(this.label4);
@@ -159,5 +177,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLoyaltyNum;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
