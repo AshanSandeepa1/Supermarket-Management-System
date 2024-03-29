@@ -166,7 +166,7 @@ namespace Supermarket_Management_System
             UpdateTotal();
         }
 
-        private void UpdateTotal()
+        private decimal UpdateTotal()
         {
             // Calculate total value of items
             decimal total = 0;
@@ -181,6 +181,7 @@ namespace Supermarket_Management_System
 
             // Update lblTotal label with the calculated total value
             lblTotal.Text = total.ToString("0.00"); // Format to display only two decimal places
+            return total;
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -248,5 +249,15 @@ namespace Supermarket_Management_System
             }
         }
 
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            // Get the total value
+            decimal total = UpdateTotal();
+
+            // Open Checkout form and pass total value
+            Checkout checkoutForm = new Checkout(total, this);
+            checkoutForm.Show();
+        }
     }
 }
