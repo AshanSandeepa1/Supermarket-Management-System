@@ -35,6 +35,8 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSubTotal = new System.Windows.Forms.Label();
@@ -51,15 +53,17 @@
             this.rdbtnCard = new System.Windows.Forms.RadioButton();
             this.rdbtnCash = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblDisplay = new System.Windows.Forms.Label();
             this.btnSearchCustomer = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPoints = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -136,6 +140,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 334);
             this.panel3.TabIndex = 57;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel4.Controls.Add(this.lblDisplay);
+            this.panel4.Location = new System.Drawing.Point(20, 22);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(199, 95);
+            this.panel4.TabIndex = 48;
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Bahnschrift", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplay.Location = new System.Drawing.Point(17, 26);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(80, 42);
+            this.lblDisplay.TabIndex = 43;
+            this.lblDisplay.Text = "0.00";
+            this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
             // lblDiscount
             // 
@@ -253,7 +277,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(33, 219);
+            this.label4.Location = new System.Drawing.Point(12, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 19);
             this.label4.TabIndex = 59;
@@ -263,7 +287,7 @@
             // 
             this.rdbtnYes.AutoSize = true;
             this.rdbtnYes.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnYes.Location = new System.Drawing.Point(209, 221);
+            this.rdbtnYes.Location = new System.Drawing.Point(188, 18);
             this.rdbtnYes.Name = "rdbtnYes";
             this.rdbtnYes.Size = new System.Drawing.Size(45, 20);
             this.rdbtnYes.TabIndex = 60;
@@ -276,19 +300,20 @@
             // 
             this.rdbtnNo.AutoSize = true;
             this.rdbtnNo.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnNo.Location = new System.Drawing.Point(260, 221);
+            this.rdbtnNo.Location = new System.Drawing.Point(239, 18);
             this.rdbtnNo.Name = "rdbtnNo";
             this.rdbtnNo.Size = new System.Drawing.Size(41, 20);
             this.rdbtnNo.TabIndex = 61;
             this.rdbtnNo.TabStop = true;
             this.rdbtnNo.Text = "No";
             this.rdbtnNo.UseVisualStyleBackColor = true;
+            this.rdbtnNo.CheckedChanged += new System.EventHandler(this.rdbtnNo_CheckedChanged);
             // 
             // rdbtnCard
             // 
             this.rdbtnCard.AutoSize = true;
             this.rdbtnCard.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnCard.Location = new System.Drawing.Point(180, 295);
+            this.rdbtnCard.Location = new System.Drawing.Point(157, 38);
             this.rdbtnCard.Name = "rdbtnCard";
             this.rdbtnCard.Size = new System.Drawing.Size(129, 20);
             this.rdbtnCard.TabIndex = 64;
@@ -300,7 +325,7 @@
             // 
             this.rdbtnCash.AutoSize = true;
             this.rdbtnCash.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnCash.Location = new System.Drawing.Point(180, 269);
+            this.rdbtnCash.Location = new System.Drawing.Point(157, 12);
             this.rdbtnCash.Name = "rdbtnCash";
             this.rdbtnCash.Size = new System.Drawing.Size(54, 20);
             this.rdbtnCash.TabIndex = 63;
@@ -313,31 +338,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(33, 267);
+            this.label7.Location = new System.Drawing.Point(10, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 19);
             this.label7.TabIndex = 62;
             this.label7.Text = "Payment Method";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel4.Controls.Add(this.lblDisplay);
-            this.panel4.Location = new System.Drawing.Point(20, 22);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 95);
-            this.panel4.TabIndex = 48;
-            // 
-            // lblDisplay
-            // 
-            this.lblDisplay.AutoSize = true;
-            this.lblDisplay.Font = new System.Drawing.Font("Bahnschrift", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(30, 27);
-            this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(80, 42);
-            this.lblDisplay.TabIndex = 43;
-            this.lblDisplay.Text = "0.00";
-            this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
             // btnSearchCustomer
             // 
@@ -377,20 +382,38 @@
             this.lblPoints.TabIndex = 66;
             this.lblPoints.Text = "Points:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbtnNo);
+            this.groupBox1.Controls.Add(this.rdbtnYes);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(21, 203);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(303, 56);
+            this.groupBox1.TabIndex = 67;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdbtnCard);
+            this.groupBox2.Controls.Add(this.rdbtnCash);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(23, 264);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(300, 77);
+            this.groupBox2.TabIndex = 68;
+            this.groupBox2.TabStop = false;
+            // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSearchCustomer);
-            this.Controls.Add(this.rdbtnCard);
-            this.Controls.Add(this.rdbtnCash);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.rdbtnNo);
-            this.Controls.Add(this.rdbtnYes);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRegCustmer);
             this.Controls.Add(this.txtLoyaltyNum);
             this.Controls.Add(this.label2);
@@ -408,6 +431,10 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +469,7 @@
         private System.Windows.Forms.Button btnSearchCustomer;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPoints;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
