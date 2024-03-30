@@ -133,6 +133,37 @@ namespace Supermarket_Management_System
             }
             
         }
+        private void rdbtnNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbtnNo.Checked)
+            {
+                discount = 0.00m;
+                lblDiscount.Text = "0.00";
+                total = price;
+                lblTotal.Text = total.ToString("0.00");
+                lblDisplay.Text = "Rs." + total.ToString("0.00");
+            }
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            // Get the sender radio button
+            RadioButton selectedRadioButton = sender as RadioButton;
+
+            // Get the parent group box of the sender radio button
+            GroupBox parentGroupBox = selectedRadioButton.Parent as GroupBox;
+
+            // Iterate through each control in the group box
+            foreach (Control control in parentGroupBox.Controls)
+            {
+                // Check if the control is a radio button and is not the sender radio button
+                if (control is RadioButton && control != selectedRadioButton)
+                {
+                    // Disable the radio button
+                    (control as RadioButton).Enabled = !selectedRadioButton.Checked;
+                }
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
