@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,21 +14,24 @@ namespace Supermarket_Management_System
 {
     public partial class Checkout : Form
     {
+        private List<CartItem> cartItems;
         private Form previousForm;
         private int points = 0;
         private decimal discount = 0;
         private decimal total = 0;
         private decimal price;
-        private const string connectionString = "server=127.0.0.1; user=root; database=supermarket_mgmt_system; password=";
+        private MySqlConnection mysqlConnection;
 
-        public Checkout(decimal subtotal, Form previousFrom)
+        public Checkout(decimal subtotal, List<CartItem> cartItems, Form previousFrom)
         {
             InitializeComponent();
             this.previousForm = previousFrom;
+            this.cartItems = cartItems;
             lblSubTotal.Text = subtotal.ToString("0.00");
             lblDisplay.Text = "Rs."+ subtotal.ToString("0.00");
             lblTotal.Text = subtotal.ToString("0.00");
             price = subtotal;
+            mysqlConnection = new MySqlConnection("server=127.0.0.1; user=root; database=supermarket_mgmt_system; password=");
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -75,16 +79,14 @@ namespace Supermarket_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string loyaltyNumber = txtLoyaltyNum.Text;
+                string loyaltyNumber = txtLoyaltyNum.Text;
 
-            string query = "SELECT name, points FROM customer_table WHERE loyalty_number = @LoyaltyNumber";
+                string query = "SELECT name, points FROM customer_table WHERE loyalty_number = @LoyaltyNumber";
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, mysqlConnection))
                 {
+                    mysqlConnection.Open();
+
                     command.Parameters.AddWithValue("@LoyaltyNumber", loyaltyNumber);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
@@ -106,8 +108,8 @@ namespace Supermarket_Management_System
                         }
                     }
                 }
+                mysqlConnection.Close(); // Close the connection
             }
-        }
 
         private void lblUser_Click(object sender, EventArgs e)
         {
@@ -167,6 +169,54 @@ namespace Supermarket_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Open the database connection
+                mysqlConnection.Open();
+
+                // Insert data into transactions table
+                string transactionQuery = "INSERT INTO transactions (loyaltyNumber, transactionDate, totalAmount, discount, netTotal) " +
+                                          "VALUES (@LoyaltyNumber, @TransactionDate, @TotalAmount, @Discount, @NetTotal)";
+                MySqlCommand transactionCommand = new MySqlCommand(transactionQuery, mysqlConnection);
+                transactionCommand.Parameters.AddWithValue("@LoyaltyNumber", txtLoyaltyNum.Text); // Assuming loyalty number is entered in a textbox
+                transactionCommand.Parameters.AddWithValue("@TransactionDate", DateTime.Now); // Assuming current date/time
+                transactionCommand.Parameters.AddWithValue("@TotalAmount", lblSubTotal.Text);
+                transactionCommand.Parameters.AddWithValue("@Discount", lblDiscount.Text);
+                transactionCommand.Parameters.AddWithValue("@NetTotal", lblTotal.Text);
+                transactionCommand.ExecuteNonQuery(); // Execute transaction query
+
+                // Get the last inserted transaction ID
+                long lastInsertedBillNumber = transactionCommand.LastInsertedId;
+
+                
+                // Insert data into transaction_items table
+                foreach (var item in cartItems)
+                {
+                    string transactionItemQuery = "INSERT INTO transaction_items (billNumber, barcode, itemName, quantity, unitPrice, totalItemPrice) " +
+                                                  "VALUES (@billNumber, @Barcode, @ItemName, @Quantity, @UnitPrice, @TotalItemPrice)";
+                    MySqlCommand itemCommand = new MySqlCommand(transactionItemQuery, mysqlConnection);
+                    itemCommand.Parameters.AddWithValue("@billNumber", lastInsertedBillNumber);
+                    itemCommand.Parameters.AddWithValue("@Barcode", item.Barcode);
+                    itemCommand.Parameters.AddWithValue("@ItemName", item.ItemName);
+                    itemCommand.Parameters.AddWithValue("@Quantity", item.Quantity);
+                    itemCommand.Parameters.AddWithValue("@UnitPrice", item.UnitPrice);
+                    itemCommand.Parameters.AddWithValue("@TotalItemPrice", item.TotalPrice);
+                    itemCommand.ExecuteNonQuery(); // Execute item query
+                }
+
+                MessageBox.Show("Transaction recorded successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                mysqlConnection.Close(); // Close the database connection
+            }
+
+
+
             //if rdbtnCard.Checked -- open card payment
             //else PDF preview
         }

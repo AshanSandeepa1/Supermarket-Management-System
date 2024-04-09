@@ -436,7 +436,7 @@
             // 
             // clmPrice
             // 
-            this.clmPrice.HeaderText = "Price";
+            this.clmPrice.HeaderText = "Unit-Price";
             this.clmPrice.Name = "clmPrice";
             this.clmPrice.ReadOnly = true;
             this.clmPrice.Width = 90;

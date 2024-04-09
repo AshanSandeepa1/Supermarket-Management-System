@@ -15,6 +15,7 @@ namespace Supermarket_Management_System
     {
         private Form previousForm; // Reference to the previous form
         private MySqlConnection mysqlConnection;
+        private List<CartItem> cartItems = new List<CartItem>();
         public Cart(Form previousForm)
         {
             InitializeComponent();
@@ -51,6 +52,9 @@ namespace Supermarket_Management_System
 
                     // Add the item to DataGridView
                     dataGridView1.Rows.Add(barcode, itemName, 1, price, "Edit", "Delete");
+                       
+                    // Add the item to cartItems list
+                    cartItems.Add(new CartItem { Barcode = barcode, ItemName = itemName, Quantity = 1, UnitPrice = price });
                     txtBarcode.Clear(); //clear text if success
                 }
                 else
@@ -80,6 +84,13 @@ namespace Supermarket_Management_System
                     row.Cells["clmItemName"].Value = e.ItemName;
                     row.Cells["clmQuantity"].Value = e.Quantity;
                     row.Cells["clmPrice"].Value = e.Price;
+                    // Update the quantity of the corresponding item in cartItems list
+                    var cartItem = cartItems.FirstOrDefault(item => item.Barcode == e.Barcode);
+                    if (cartItem != null)
+                    {
+                        // If the quantity is not provided in the event args, default it to 1
+                        cartItem.Quantity = e.Quantity == 0 ? 1 : e.Quantity;
+                    }
                     break;
                 }
             }
@@ -180,7 +191,7 @@ namespace Supermarket_Management_System
             }
 
             // Update lblTotal label with the calculated total value
-            lblTotal.Text = total.ToString("0.00"); // Format to display only two decimal places
+            lblTotal.Text = total.ToString("0.00"); 
             return total;
         }
 
@@ -256,9 +267,18 @@ namespace Supermarket_Management_System
 
             if (total > 0){
                 // Open Checkout form and pass total value
-                Checkout checkoutForm = new Checkout(total, this);
+                Checkout checkoutForm = new Checkout(total,cartItems, this);
                 checkoutForm.Show();
                 this.Hide();
+
+                /**
+                // Display MessageBox with cart items for debugging only
+                StringBuilder message = new StringBuilder();
+                foreach (var item in cartItems)
+                {
+                    message.AppendLine($"Item: {item.ItemName}, Quantity: {item.Quantity}, Unit Price: {item.UnitPrice}");
+                }
+                MessageBox.Show(message.ToString(), "Cart Items", MessageBoxButtons.OK, MessageBoxIcon.Information); **/
             }
             else
             {
