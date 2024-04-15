@@ -32,9 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtBillNum = new System.Windows.Forms.TextBox();
-            this.txtLoyaltyNum = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,7 +44,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(257, 94);
+            this.label1.Location = new System.Drawing.Point(246, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 45);
             this.label1.TabIndex = 0;
@@ -72,38 +70,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(191, 216);
+            this.label5.Location = new System.Drawing.Point(189, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 19);
             this.label5.TabIndex = 13;
             this.label5.Text = "Bill Number";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(177, 174);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 19);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Loyalty Number";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // txtBillNum
             // 
             this.txtBillNum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtBillNum.Location = new System.Drawing.Point(310, 215);
+            this.txtBillNum.Location = new System.Drawing.Point(311, 192);
             this.txtBillNum.Name = "txtBillNum";
             this.txtBillNum.Size = new System.Drawing.Size(221, 21);
             this.txtBillNum.TabIndex = 11;
-            // 
-            // txtLoyaltyNum
-            // 
-            this.txtLoyaltyNum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtLoyaltyNum.Location = new System.Drawing.Point(310, 174);
-            this.txtLoyaltyNum.Name = "txtLoyaltyNum";
-            this.txtLoyaltyNum.Size = new System.Drawing.Size(221, 21);
-            this.txtLoyaltyNum.TabIndex = 10;
             // 
             // btnBack
             // 
@@ -153,11 +132,10 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBillNum);
-            this.Controls.Add(this.txtLoyaltyNum);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BillTracker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BillTracker";
@@ -172,9 +150,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBillNum;
-        private System.Windows.Forms.TextBox txtLoyaltyNum;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;

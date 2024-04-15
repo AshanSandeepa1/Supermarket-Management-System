@@ -86,6 +86,7 @@
             this.btnViewInventory.Text = "View Inventory";
             this.btnViewInventory.UseCompatibleTextRendering = true;
             this.btnViewInventory.UseVisualStyleBackColor = false;
+            this.btnViewInventory.Click += new System.EventHandler(this.btnViewInventory_Click);
             // 
             // btnLogout
             // 
@@ -129,6 +130,7 @@
             this.btnUpdateInventory.Text = "Update Inventory";
             this.btnUpdateInventory.UseCompatibleTextRendering = true;
             this.btnUpdateInventory.UseVisualStyleBackColor = false;
+            this.btnUpdateInventory.Click += new System.EventHandler(this.btnUpdateInventory_Click);
             // 
             // btnReturnProducts
             // 
@@ -143,6 +145,7 @@
             this.btnReturnProducts.Text = "Return of Products";
             this.btnReturnProducts.UseCompatibleTextRendering = true;
             this.btnReturnProducts.UseVisualStyleBackColor = false;
+            this.btnReturnProducts.Click += new System.EventHandler(this.btnReturnProducts_Click);
             // 
             // StockKeeperHome
             // 
@@ -157,6 +160,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StockKeeperHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockKeeperHome";

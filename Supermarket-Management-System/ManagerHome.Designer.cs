@@ -91,6 +91,7 @@
             this.btnBillTracker.Text = "Bill Tracker";
             this.btnBillTracker.UseCompatibleTextRendering = true;
             this.btnBillTracker.UseVisualStyleBackColor = false;
+            this.btnBillTracker.Click += new System.EventHandler(this.btnBillTracker_Click);
             // 
             // btnReturnProducts
             // 
@@ -105,6 +106,7 @@
             this.btnReturnProducts.Text = "Return of Products";
             this.btnReturnProducts.UseCompatibleTextRendering = true;
             this.btnReturnProducts.UseVisualStyleBackColor = false;
+            this.btnReturnProducts.Click += new System.EventHandler(this.btnReturnProducts_Click);
             // 
             // btnAddLoyaltyData
             // 
@@ -119,6 +121,7 @@
             this.btnAddLoyaltyData.Text = "Add Loyalty Data";
             this.btnAddLoyaltyData.UseCompatibleTextRendering = true;
             this.btnAddLoyaltyData.UseVisualStyleBackColor = false;
+            this.btnAddLoyaltyData.Click += new System.EventHandler(this.btnAddLoyaltyData_Click);
             // 
             // btnCustData
             // 
@@ -133,6 +136,7 @@
             this.btnCustData.Text = "View Customer Data";
             this.btnCustData.UseCompatibleTextRendering = true;
             this.btnCustData.UseVisualStyleBackColor = false;
+            this.btnCustData.Click += new System.EventHandler(this.btnCustData_Click);
             // 
             // btnViewInventory
             // 
@@ -147,6 +151,7 @@
             this.btnViewInventory.Text = "View Inventory";
             this.btnViewInventory.UseCompatibleTextRendering = true;
             this.btnViewInventory.UseVisualStyleBackColor = false;
+            this.btnViewInventory.Click += new System.EventHandler(this.btnViewInventory_Click);
             // 
             // btnCreateOrder
             // 
@@ -161,6 +166,7 @@
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseCompatibleTextRendering = true;
             this.btnCreateOrder.UseVisualStyleBackColor = false;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // btnBack
             // 
@@ -183,13 +189,14 @@
             this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReports.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(89, 317);
+            this.btnReports.Location = new System.Drawing.Point(425, 311);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(303, 51);
             this.btnReports.TabIndex = 34;
             this.btnReports.Text = "Generate Reports";
             this.btnReports.UseCompatibleTextRendering = true;
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnTransactionInfo
             // 
@@ -197,7 +204,7 @@
             this.btnTransactionInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTransactionInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTransactionInfo.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransactionInfo.Location = new System.Drawing.Point(425, 317);
+            this.btnTransactionInfo.Location = new System.Drawing.Point(89, 311);
             this.btnTransactionInfo.Name = "btnTransactionInfo";
             this.btnTransactionInfo.Size = new System.Drawing.Size(303, 51);
             this.btnTransactionInfo.TabIndex = 35;
@@ -238,6 +245,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerHome";

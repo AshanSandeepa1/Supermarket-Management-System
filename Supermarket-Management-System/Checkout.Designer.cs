@@ -256,6 +256,7 @@
             this.txtLoyaltyNum.Name = "txtLoyaltyNum";
             this.txtLoyaltyNum.Size = new System.Drawing.Size(168, 20);
             this.txtLoyaltyNum.TabIndex = 58;
+            this.txtLoyaltyNum.TextChanged += new System.EventHandler(this.txtLoyaltyNum_TextChanged);
             // 
             // btnRegCustmer
             // 
@@ -320,6 +321,7 @@
             this.rdbtnCard.TabStop = true;
             this.rdbtnCard.Text = "Credit/ Debit Card";
             this.rdbtnCard.UseVisualStyleBackColor = true;
+            this.rdbtnCard.CheckedChanged += new System.EventHandler(this.rdbtnCard_CheckedChanged);
             // 
             // rdbtnCash
             // 
@@ -332,6 +334,7 @@
             this.rdbtnCash.TabStop = true;
             this.rdbtnCash.Text = "Cash";
             this.rdbtnCash.UseVisualStyleBackColor = true;
+            this.rdbtnCash.CheckedChanged += new System.EventHandler(this.rdbtnCash_CheckedChanged);
             // 
             // label7
             // 
@@ -421,6 +424,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Checkout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkout";

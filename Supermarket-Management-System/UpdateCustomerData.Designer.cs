@@ -50,7 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtloyaltypoints = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,16 +83,16 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(82, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 19);
+            this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 91;
-            this.label2.Text = "Loyalty No.";
+            this.label2.Text = "Loyalty Number";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Location = new System.Drawing.Point(0, 390);
+            this.panel2.Location = new System.Drawing.Point(0, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(801, 59);
             this.panel2.TabIndex = 93;
@@ -125,6 +124,7 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseCompatibleTextRendering = true;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnFilter
             // 
@@ -139,6 +139,7 @@
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseCompatibleTextRendering = true;
             this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // label1
             // 
@@ -155,7 +156,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 59);
             this.panel1.TabIndex = 92;
@@ -215,7 +216,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(82, 177);
+            this.label3.Location = new System.Drawing.Point(82, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 19);
             this.label3.TabIndex = 103;
@@ -244,7 +245,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(82, 296);
+            this.label7.Location = new System.Drawing.Point(82, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 19);
             this.label7.TabIndex = 111;
@@ -268,26 +269,11 @@
             this.label8.TabIndex = 113;
             this.label8.Text = "Loyalty Points";
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.LightGray;
-            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddUser.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.Location = new System.Drawing.Point(534, 261);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(156, 35);
-            this.btnAddUser.TabIndex = 115;
-            this.btnAddUser.Text = "Add New User";
-            this.btnAddUser.UseCompatibleTextRendering = true;
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            // 
             // UpdateCustomerData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.txtloyaltypoints);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtRegDate);
@@ -307,6 +293,7 @@
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateCustomerData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateCustomerData";
@@ -342,6 +329,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtloyaltypoints;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnAddUser;
     }
 }

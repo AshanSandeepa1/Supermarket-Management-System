@@ -26,7 +26,17 @@ namespace Supermarket_Management_System
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            long billNumber;
+            if (long.TryParse(txtBillNum.Text, out billNumber))
+            {
+                BillPreview billPreviewForm = new BillPreview(billNumber);
+                billPreviewForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid bill number. Please enter a valid number.");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

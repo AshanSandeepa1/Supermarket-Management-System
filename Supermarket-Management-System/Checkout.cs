@@ -149,19 +149,12 @@ namespace Supermarket_Management_System
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            // Get the sender radio button
             RadioButton selectedRadioButton = sender as RadioButton;
-
-            // Get the parent group box of the sender radio button
             GroupBox parentGroupBox = selectedRadioButton.Parent as GroupBox;
-
-            // Iterate through each control in the group box
             foreach (Control control in parentGroupBox.Controls)
             {
-                // Check if the control is a radio button and is not the sender radio button
                 if (control is RadioButton && control != selectedRadioButton)
                 {
-                    // Disable the radio button
                     (control as RadioButton).Enabled = !selectedRadioButton.Checked;
                 }
             }
@@ -171,24 +164,47 @@ namespace Supermarket_Management_System
         {
             try
             {
-                // Open the database connection
                 mysqlConnection.Open();
+                string loyaltyNumber = string.IsNullOrEmpty(txtLoyaltyNum.Text) ? "NA" : txtLoyaltyNum.Text;
 
-                // Insert data into transactions table
-                string transactionQuery = "INSERT INTO transactions (loyaltyNumber, transactionDate, totalAmount, discount, netTotal) " +
-                                          "VALUES (@LoyaltyNumber, @TransactionDate, @TotalAmount, @Discount, @NetTotal)";
+                string transactionQuery = "INSERT INTO transactions (loyaltyNumber, transactionDate, paymentMethod, totalAmount, discount, netTotal) " +
+                                          "VALUES (@LoyaltyNumber, @TransactionDate, @PaymentMethod, @TotalAmount, @Discount, @NetTotal)";
                 MySqlCommand transactionCommand = new MySqlCommand(transactionQuery, mysqlConnection);
-                transactionCommand.Parameters.AddWithValue("@LoyaltyNumber", txtLoyaltyNum.Text); // Assuming loyalty number is entered in a textbox
-                transactionCommand.Parameters.AddWithValue("@TransactionDate", DateTime.Now); // Assuming current date/time
+                transactionCommand.Parameters.AddWithValue("@LoyaltyNumber", loyaltyNumber);
+                transactionCommand.Parameters.AddWithValue("@TransactionDate", DateTime.Now);
                 transactionCommand.Parameters.AddWithValue("@TotalAmount", lblSubTotal.Text);
                 transactionCommand.Parameters.AddWithValue("@Discount", lblDiscount.Text);
                 transactionCommand.Parameters.AddWithValue("@NetTotal", lblTotal.Text);
-                transactionCommand.ExecuteNonQuery(); // Execute transaction query
+
+                string paymentMethod = rdbtnCard.Checked ? "Card" : "Cash";
+                transactionCommand.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
+
+                transactionCommand.ExecuteNonQuery();
 
                 // Get the last inserted transaction ID
                 long lastInsertedBillNumber = transactionCommand.LastInsertedId;
 
-                
+                // Update loyalty points
+                if (!string.IsNullOrEmpty(txtLoyaltyNum.Text))
+                {
+                    decimal transactionAmount = Convert.ToDecimal(lblTotal.Text);
+                    int loyaltyPointsToAdd = Convert.ToInt32(transactionAmount * 0.05m);
+
+                    string loyaltyQuery = "SELECT points FROM customer_table WHERE loyalty_number = @LoyaltyNumber";
+                    MySqlCommand loyaltyCommand = new MySqlCommand(loyaltyQuery, mysqlConnection);
+                    loyaltyCommand.Parameters.AddWithValue("@LoyaltyNumber", txtLoyaltyNum.Text);
+                    int currentPoints = Convert.ToInt32(loyaltyCommand.ExecuteScalar());
+
+                    int newPoints = currentPoints + loyaltyPointsToAdd;
+
+                    // Update loyalty points in the database
+                    string updatePointsQuery = "UPDATE customer_table SET points = @Points WHERE loyalty_number = @LoyaltyNumber";
+                    MySqlCommand updatePointsCommand = new MySqlCommand(updatePointsQuery, mysqlConnection);
+                    updatePointsCommand.Parameters.AddWithValue("@Points", newPoints);
+                    updatePointsCommand.Parameters.AddWithValue("@LoyaltyNumber", txtLoyaltyNum.Text);
+                    updatePointsCommand.ExecuteNonQuery();
+                }
+
                 // Insert data into transaction_items table
                 foreach (var item in cartItems)
                 {
@@ -204,7 +220,31 @@ namespace Supermarket_Management_System
                     itemCommand.ExecuteNonQuery(); // Execute item query
                 }
 
-                MessageBox.Show("Transaction recorded successfully!");
+                // Update the no_of_items in the stocks_table for each item in the cart
+                foreach (var item in cartItems)
+                {
+                    // Retrieve the current stock quantity for the item
+                    string stockQuery = "SELECT no_of_items FROM stocks_table WHERE barcode = @Barcode";
+                    MySqlCommand stockCommand = new MySqlCommand(stockQuery, mysqlConnection);
+                    stockCommand.Parameters.AddWithValue("@Barcode", item.Barcode);
+                    int currentStock = Convert.ToInt32(stockCommand.ExecuteScalar());
+
+                    // Subtract the quantity sold from the current stock
+                    int newStock = currentStock - item.Quantity;
+
+                    // Update the no_of_items in the stocks_table
+                    string updateStockQuery = "UPDATE stocks_table SET no_of_items = @NewStock WHERE barcode = @Barcode";
+                    MySqlCommand updateStockCommand = new MySqlCommand(updateStockQuery, mysqlConnection);
+                    updateStockCommand.Parameters.AddWithValue("@NewStock", newStock);
+                    updateStockCommand.Parameters.AddWithValue("@Barcode", item.Barcode);
+                    updateStockCommand.ExecuteNonQuery(); // Execute update query
+                }
+
+                //MessageBox.Show("Transaction recorded successfully!");
+
+                BillPreview billPreviewForm = new BillPreview(lastInsertedBillNumber);
+                billPreviewForm.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -215,10 +255,25 @@ namespace Supermarket_Management_System
                 mysqlConnection.Close(); // Close the database connection
             }
 
+        }
 
+        private void txtLoyaltyNum_TextChanged(object sender, EventArgs e)
+        {
 
-            //if rdbtnCard.Checked -- open card payment
-            //else PDF preview
+        }
+
+        private void rdbtnCash_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbtnCard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbtnCard.Checked)
+            {
+                CardPayment cardPaymentForm = new CardPayment();
+                cardPaymentForm.ShowDialog();
+            }
         }
     }
 }
