@@ -177,6 +177,7 @@
     <Compile Include="ReturnOfProducts.Designer.cs">
       <DependentUpon>ReturnOfProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="StockKeeperHome.cs">
       <SubType>Form</SubType>
     </Compile>

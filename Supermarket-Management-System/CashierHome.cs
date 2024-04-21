@@ -47,7 +47,6 @@ namespace Supermarket_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Create an instance of BillTracker and pass 'this' as the previousForm parameter, and hide this form
             ViewInventory ViewInventoryScreen = new ViewInventory(this);
             ViewInventoryScreen.Show();
             this.Hide();
@@ -55,7 +54,6 @@ namespace Supermarket_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Create an instance of BillTracker and pass 'this' as the previousForm parameter, and hide this form
             ViewCustomerData ViewCustomerDataScreen = new ViewCustomerData(this);
             ViewCustomerDataScreen.Show();
             this.Hide();
@@ -70,7 +68,6 @@ namespace Supermarket_Management_System
 
         private void btnReturnProducts_Click(object sender, EventArgs e)
         {
-            // Create an instance of BillTracker and pass 'this' as the previousForm parameter, and hide this form
             ReturnOfProducts ReturnOfProductsScreen = new ReturnOfProducts(this);
             ReturnOfProductsScreen.Show();
             this.Hide();
@@ -80,16 +77,17 @@ namespace Supermarket_Management_System
         {
             // Hide the current form (ManagerHomeScreen)
             this.Hide();
+            Session.EndSession();
 
             // Show the previous form
-            if (previousForm != null)
+            if (previousForm != null && !previousForm.IsDisposed)
             {
                 previousForm.Show();
             }
             else
             {
                 // If previous form is null, just close this form
-                this.Close();
+                Application.Exit();
             }
         }
 
@@ -100,6 +98,7 @@ namespace Supermarket_Management_System
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
+                Session.EndSession();
             }
         }
 
@@ -110,7 +109,6 @@ namespace Supermarket_Management_System
 
         private void btnAddLoyaltyData_Click(object sender, EventArgs e)
         {
-            // Create an instance of BillTracker and pass 'this' as the previousForm parameter, and hide this form
             UpdateCustomerData UpdateCustomerDataScreen = new UpdateCustomerData(this);
             UpdateCustomerDataScreen.Show();
             this.Hide();

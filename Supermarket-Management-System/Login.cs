@@ -12,11 +12,20 @@ namespace Supermarket_Management_System
         public Login()
         {
             InitializeComponent();
+            this.Activated += Login_FormActivated;
         }
 
+        private void Login_FormActivated(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            cmbRole.SelectedItem = null;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            cmbRole.SelectedItem = null;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,6 +86,7 @@ namespace Supermarket_Management_System
                     if (result != null)
                     {
                         //MessageBox.Show("Login successful!");
+                        Session.StartSession(username, role); //create  session [to identify user role when going forward]
 
                         // Redirect user based on role
                         if (role == "Manager")
@@ -139,6 +149,11 @@ namespace Supermarket_Management_System
         {
             StockKeeperHome stockkeeperHomeScreen = new StockKeeperHome(username, this);
             stockkeeperHomeScreen.Show();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
